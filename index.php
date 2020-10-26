@@ -73,7 +73,7 @@ switch ($dispo) {
 <input type="submit" name="envoyer">
 </form>
 
-<!-- tableau -->
+<!-- tabl -->
 <?php
 $dispo=["lundi","mardi","mercredi","jeudi","vendredi"];
 
