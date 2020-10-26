@@ -1,5 +1,5 @@
 <?php
-// dimentions
+// dimentions---
 $long=20;
 $larg=10;
 // aire
