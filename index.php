@@ -8,14 +8,39 @@ elseif ($civ=="mme") {
    echo "bonjour madame";
 }
 
+$dispo=$_POST["dispo"];
+switch ($dispo) {
+    case 'lundi':
+        echo "aaa";
+        break;
+
+    case 'mardi':
+        echo "bbb";
+        break;
+
+    case 'mercredi':
+       echo "ccc";
+        break;
+
+    case 'jeudi':
+        echo "ddd";
+        break; 
+    
+    case 'vendredi': 
+        echo "eee";
+}
+
+
+
+
 
 
 
 
 ?>
 <form action="index.php" method="POST" >
-<label for="civ"> civ </label>
-<select name="civ"> 
+<label for="civ"> civ </label><br>
+<select name="civ">
 
   <option value="-">-</option>
   <option value="mr"> mr </option>
@@ -33,9 +58,26 @@ elseif ($civ=="mme") {
 <input type="text" name="adresse"><br>
 
 
+<label for="dispo"> dispo </label>
+<select name="dispo">
+<option value="lundi"> lundi </option>
+<option value="mardi"> mardi </option>
+<option value="mercredi"> mercredi </option>
+<option value="jeudi"> jeudi</option>
+<option value="vendredi"> vendredi </option>
+
+
+</select>
 
 
 
 
 <input type="submit" name="envoyer">
 </form>
+<?php
+$dispo=["lundi","mardi","mercredi","jeudi","vendredi"];
+
+foreach ($dispo as $key => $value) {
+ echo $value;
+}
+?>
