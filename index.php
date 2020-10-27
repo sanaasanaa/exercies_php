@@ -1,12 +1,28 @@
 <?php
 
+
+//   commence si la page est vide alors affiche echo 
+if (empty($_POST)) 
+{
+echo "saisissez un texe";
+
+} 
+// sinon  rentre toutes les informations suivantes
+else
+{
 $civ=$_POST["civ"];
+
 if ($civ=="mr") {
    echo "bonjour monsieur";
+   
 }
-elseif ($civ=="mme") {
+
+if ($civ=="mme") {
    echo "bonjour madame";
 }
+
+
+
 
 $dispo=$_POST["dispo"];
 switch ($dispo) {
@@ -29,15 +45,12 @@ switch ($dispo) {
     case 'vendredi': 
         echo "eee";
 }
-
-
-
-
-
-
-
+ }
 
 ?>
+
+
+
 <form action="index.php" method="POST" >
 <label for="civ"> civ </label><br>
 <select name="civ">
